@@ -1,5 +1,11 @@
+import Videos from "./videos";
+
 function Home() {
-  return <div>Name: Aubdur Rob Anik</div>;
+  return (
+    <div>
+      <Videos />
+    </div>
+  );
 }
 
 export default Home;

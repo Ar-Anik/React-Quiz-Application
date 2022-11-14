@@ -9,7 +9,7 @@ function Navber() {
         <li>
           <a href="index.html" className={classes.brand}>
             <img src={logo} alt="Logo" />
-            <h3>First React Project</h3>
+            <h3>Quiz Application</h3>
           </a>
         </li>
       </ul>
