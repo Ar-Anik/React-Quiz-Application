@@ -1,6 +1,6 @@
-import picture2 from "../../images/3.jpg";
-import picture1 from "../../images/4.jpg";
-import classes from "../../styles/Videos.module.css";
+import picture2 from "../images/3.jpg";
+import picture1 from "../images/4.jpg";
+import classes from "../styles/Videos.module.css";
 import Video from "./video";
 
 function Videos() {

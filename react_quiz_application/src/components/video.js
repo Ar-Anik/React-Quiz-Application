@@ -1,4 +1,4 @@
-import classes from "../../styles/Video.module.css";
+import classes from "../styles/Video.module.css";
 
 function Video({ picture, questionNumber, score }) {
   return (
