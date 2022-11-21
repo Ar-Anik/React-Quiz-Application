@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../images/logo-bg.png";
 import classes from "../styles/Navber.module.css";
 import Account from "./Account";
@@ -7,10 +8,10 @@ function Navber() {
     <nav className={classes.nav}>
       <ul>
         <li>
-          <a href="index.html" className={classes.brand}>
+          <Link exact to="/" className={classes.brand}>
             <img src={logo} alt="Logo" />
             <h3>Quiz Application</h3>
-          </a>
+          </Link>
         </li>
       </ul>
 

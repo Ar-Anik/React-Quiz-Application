@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import classes from "../styles/Video.module.css";
 
 function Video({ picture, questionNumber, score }) {
   return (
-    <a href="quiz.html">
+    <Link exact to="/quiz">
       <div className={classes.video}>
         <img src={picture} alt="Not Found" />
         <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
@@ -11,7 +12,7 @@ function Video({ picture, questionNumber, score }) {
           <p>{score}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
