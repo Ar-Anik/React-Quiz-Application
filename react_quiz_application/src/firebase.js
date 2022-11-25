@@ -10,4 +10,6 @@ const app = initializeApp({
   appId: process.env.REACT_APP_ID,
 });
 
-export default getAuth(app);
+const auth = getAuth(app);
+
+export default auth;

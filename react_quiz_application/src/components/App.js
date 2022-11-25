@@ -1,3 +1,4 @@
+import { Route, Switch } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
 import "../styles/App.css";
 import Layout from "./Layout";
@@ -7,8 +8,8 @@ import Login from "./Pages/Login";
 import Quiz from "./Pages/Quiz";
 import Result from "./Pages/Result";
 import Signup from "./Pages/Signup";
-
-import { Route, Switch } from "react-router-dom";
+import PrivateRouter from "./PrivateRouter";
+import PublicRouter from "./PublicRouter";
 
 function App() {
   return (
@@ -22,13 +23,13 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
 
-          <Route exact path="/signup" component={Signup} />
+          <PublicRouter exact path="/signup" component={Signup} />
 
-          <Route exact path="/Login" component={Login} />
+          <PublicRouter exact path="/Login" component={Login} />
 
-          <Route exact path="/Result" component={Result} />
+          <PrivateRouter exact path="/Result" component={Result} />
 
-          <Route exact path="/Quiz" component={Quiz} />
+          <PrivateRouter exact path="/Quiz" component={Quiz} />
 
           <Route exact component={Error} />
         </Switch>
