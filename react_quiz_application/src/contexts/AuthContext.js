@@ -17,12 +17,12 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
-  const [currentUser, setCurrrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setCurrrentUser(user);
+      setCurrentUser(user);
       setLoading(false);
     });
 
@@ -31,28 +31,27 @@ export function AuthProvider({ children }) {
 
   // signup function
   async function signup(email, password, username) {
-    // create user
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
 
-    // user profile update
+    // update profile
     await updateProfile(auth.currentUser, {
       displayName: username,
     });
 
-    // user update
     const user = auth.currentUser;
-    setCurrrentUser({
+    setCurrentUser({
       ...user,
     });
   }
 
-  //login function
+  // login function
   function login(email, password) {
     const auth = getAuth();
     return signInWithEmailAndPassword(auth, email, password);
   }
 
+  // logout function
   function logout() {
     const auth = getAuth();
     return signOut(auth);
