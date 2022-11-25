@@ -19,9 +19,9 @@ export default function SignupForm() {
   const { signup } = useAuth();
   const history = useHistory();
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    // do validation
+  async function handleSubmit(event) {
+    event.preventDefault();
+
     if (password !== confirmPassword) {
       return setError("Passwords don't match!");
     }
