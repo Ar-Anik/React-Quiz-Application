@@ -1,16 +1,16 @@
 import classes from "../styles/Question.module.css";
 import Answers from "./Answers";
 
-function Question() {
-  return (
+function Question({ answers = [] }) {
+  return answers.map((answer, index) => (
     <div className={classes.question}>
       <div className={classes.qtitle}>
         <span class="material-icons-outlined"> help_outline </span>
-        Here goes the question from Learn with Sumit?
+        {answer.title}
       </div>
-      <Answers />
+      <Answers input={false} options={answer.options} />
     </div>
-  );
+  ));
 }
 
 export default Question;

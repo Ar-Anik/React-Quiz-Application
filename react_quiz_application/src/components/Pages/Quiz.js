@@ -102,6 +102,7 @@ function Quiz() {
           <h4>Question can have multiple answers</h4>
 
           <Answers
+            input={true}
             options={qusn[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
