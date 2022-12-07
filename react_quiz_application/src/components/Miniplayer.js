@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import classes from "../styles/Miniplayer.module.css";
 
-function Miniplayer({ VideoId }) {
+function Miniplayer({ VideoId, VideoTitle }) {
   const playerButton = useRef();
   const [status, setStatus] = useState(false);
   const VideoLink = `https://www.youtube.com/watch?v=${VideoId}`;
@@ -41,7 +41,7 @@ function Miniplayer({ VideoId }) {
         playing={status}
         controls={true}
       />
-      <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+      <p>{VideoTitle}</p>
     </div>
   );
 }

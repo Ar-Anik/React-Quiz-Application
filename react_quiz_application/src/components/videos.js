@@ -22,7 +22,16 @@ function Videos() {
         >
           {videos.map((video) =>
             video.noq > 0 ? (
-              <Link exact to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
+              <Link
+                exact
+                to={{
+                  pathname: `/quiz/${video.youtubeID}`,
+                  state: {
+                    VideoTitle: video.title,
+                  },
+                }}
+                key={video.youtubeID}
+              >
                 <Video
                   title={video.title}
                   id={video.youtubeID}

@@ -14,3 +14,8 @@ npm install react-player
 
 npm install react-infinite-scroll-component
 https://www.npmjs.com/package/react-player
+
+## Get Pexels Api
+
+https://www.pexels.com/api/new/
+https://www.pexels.com/api/documentation/

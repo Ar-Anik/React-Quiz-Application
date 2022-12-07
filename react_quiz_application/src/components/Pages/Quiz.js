@@ -39,7 +39,12 @@ function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [qusn, dispatch] = useReducer(reducer, initialState);
+
   const history = useHistory();
+  const { location } = history;
+  const { state } = location;
+  const { VideoTitle } = state;
+
   const { currentUser } = useAuth();
 
   useEffect(() => {
@@ -112,7 +117,7 @@ function Quiz() {
             submit={submit}
             progress={percentage}
           />
-          <Miniplayer VideoId={id} />
+          <Miniplayer VideoId={id} VideoTitle={VideoTitle} />
         </>
       )}
     </>
