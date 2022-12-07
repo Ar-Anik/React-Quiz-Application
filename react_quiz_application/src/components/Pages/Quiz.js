@@ -112,7 +112,7 @@ function Quiz() {
             submit={submit}
             progress={percentage}
           />
-          <Miniplayer />
+          <Miniplayer VideoId={id} />
         </>
       )}
     </>
