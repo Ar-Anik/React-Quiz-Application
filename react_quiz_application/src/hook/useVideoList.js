@@ -49,9 +49,10 @@ function useVideoList(page) {
       }
     }
 
-    setTimeout(() => {
-      fetchVideos();
-    }, 1000);
+    // setTimeout(() => {
+    //   fetchVideos();
+    // }, 1000);
+    fetchVideos();
   }, [page]);
 
   return {

@@ -3,9 +3,9 @@ import Answers from "./Answers";
 
 function Question({ answers = [] }) {
   return answers.map((answer, index) => (
-    <div className={classes.question}>
+    <div className={classes.question} key={index}>
       <div className={classes.qtitle}>
-        <span class="material-icons-outlined"> help_outline </span>
+        <span className="material-icons-outlined"> help_outline </span>
         {answer.title}
       </div>
       <Answers input={false} options={answer.options} />

@@ -29,4 +29,12 @@ https://www.pexels.com/api/new/
 ## Pexels Document
 
 https://www.pexels.com/api/documentation/
+
+## For Deploy in Netlify
+
+https://create-react-app.dev/docs/deployment/
+
+## Deploy rules
+
+ create a public/_redirects file then write this file : /*  /index.html  200
  
